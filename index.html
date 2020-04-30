@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Chat App</title>
+    <script defer src="http://localhost:3000/socket.io/socket.io.js"></script>
+    <script defer src="script.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        background: #ff5f6d; /* fallback for old browsers */
+        background: -webkit-linear-gradient(
+          to right,
+          #ffc371,
+          #ff5f6d
+        ); /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(
+          to right,
+          #ffc371,
+          #ff5f6d
+        ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        font-family: "Montserrat", sans-serif;
+      }
+
+      #message-container {
+        width: 80%;
+        max-width: 1200px;
+      }
+
+      #message-container div {
+        background-color: #ff686d;
+        padding: 5px;
+      }
+
+      #message-container div:nth-child(2n) {
+        background-color: #ffb971;
+      }
+
+      .eachItem {
+        font-size: 1.2rem;
+        text-align: center;
+        height: 30px;
+        font-weight: 600;
+        color: white;
+        align-items: center;
+        justify-content: center;
+      }
+
+      #send-container {
+        position: fixed;
+        padding-bottom: 0px;
+        bottom: 0;
+        background-color: white;
+        max-width: 1200px;
+        width: 80%;
+        display: flex;
+      }
+
+      #message-input {
+        flex-grow: 1;
+      }
+
+      .heading {
+        text-align: center;
+      }
+
+      .heading h1 {
+        font-size: 3.2rem;
+      }
+
+      .main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+      }
+      button {
+        height: 40px;
+        border: none;
+        background-color: #55efc4;
+        font-family: "montserrat";
+        font-weight: bold;
+        font-size: 1.1rem;
+        text-transform: uppercase;
+      }
+
+      input[type="text"] {
+        outline: none;
+        border: none;
+        font-family: "montserrat", sans-serif;
+        font-size: 20px;
+        padding-left: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <dib class="heading">
+        <h1>REALTIME CHAT APP</h1>
+      </dib>
+
+      <div id="message-container"></div>
+      <form id="send-container">
+        <input type="text" id="message-input" autocomplete="off" />
+        <button type="submit" id="send-button">Send</button>
+      </form>
+    </div>
+  </body>
+</html>
