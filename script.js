@@ -1,7 +1,4 @@
-// const socket = io("https://chatappbyceosss.herokuapp.com/");
-// const socket = io("http://localhost:3000");
-var url = "http://" + window.location.hostname;
-const socket = io(url);
+const socket = io("http://localhost:3000");
 const messageContainer = document.getElementById("message-container");
 const messageForm = document.getElementById("send-container");
 const messageInput = document.getElementById("message-input");
